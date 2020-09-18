@@ -4,53 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA_Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Custom Color Picker</title>
-    <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-<!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 </head>
 <body>
-    <div class="card">
-        <div class="card-body text-center d-flex justify-content-center align-items-center flex-column">
-          <p>Click the below button to activate the Color Picker</p>
-          <button class="btn btn-primary btn-sm" id="color-picker-2">Open Picker</button>
-        </div>
-      </div>
-      <script>
-      const pickr2 = new Pickr({
-        el: '#color-picker-2',
-        useAsButton: true,
-        default: "123456",
-
-        components: {
-            preview: true,
-            opacity: true,
-            hue: true,
-
-            interaction: {
-            hex: true,
-            rgba: true,
-            hsla: true,
-            hsva: true,
-            cmyk: true,
-            input: true,
-            clear: true,
-            save: true
-            }
+    <div>
+        <label for="">Color Picker</label>
+        <input type="Color" name="co" onchange="changeColor(this.value)">
+    </div>
+    <div id="box"></div>
+      <script type="text/javascript">
+        function changeColor(color) {
+            document.getElementById('box').style.backgroundColor = color
         }
-        });
       </script>
 </body>
