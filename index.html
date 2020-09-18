@@ -10,17 +10,28 @@
 <body>
     <div>
         <label for="">Color Picker</label>
+        <br>
         <input type="text" id="hex">
-        <input type="color" id="color">
+        <input type="color" id="color1">
+        <br>
+        <input type="text" id="hex2">
+        <input type="color" id="color2">
         <h1>This Color Change</h1>
     </div>
       <script type="text/javascript">
-        let colorInput = document.querySelector('#color');
+        let colorInput = document.querySelector('#color1');
+        let colorInput2 = document.querySelector('#color2');
         let hexInput = document.querySelector('#hex');
+        let hexInput2 = document.querySelector('#hex2');
 
         colorInput.addEventListener('input', () => {
             let color = colorInput.value;
             hexInput.value = color;
+            document.querySelector('h1').style.color = color;
+        })
+        colorInput2.addEventListener('input', () => {
+            let color = colorInput2.value;
+            hexInput2.value = color;
             document.querySelector('h1').style.color = color;
         })
 
